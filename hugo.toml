@@ -1,0 +1,17 @@
+baseURL = 'https://omgsushi.ttmenus.com/'
+languageCode = 'en-us'
+title = 'Omg Sushi'
+theme = '_menus_ttms'
+
+[params]
+  name = "OMG Sushi"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "JSON"]
+  section = ["HTML", "JSON"]
+  page = ["HTML"]

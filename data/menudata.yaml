@@ -1,0 +1,14 @@
+onesignal: 5d5941b9-ec03-40b7-ad45-8d876474464e
+analyticsid: 6
+payments: false
+delivery: false
+notifications: true
+menu:
+  - name: Advertisments
+    icon: https://ct.ttmenus.com/icons/utilities/advertising.svg
+  - name: MainMenu
+    icon: https://ct.ttmenus.com/icons/white/icon-sushi.webp
+  - name: Bowls
+    icon: https://ct.ttmenus.com/icons/white/icon-rice.webp
+  - name: Combos
+    icon: https://ct.ttmenus.com/icons/white/icon-platter.webp

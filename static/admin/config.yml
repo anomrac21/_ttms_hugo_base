@@ -1,0 +1,312 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: "/static/images" # Folder where user uploaded files should go
+public_folder: "images"
+collections: 
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "homepage"
+        label: "HomePage"
+        file: "content/_index.md"
+        fields:
+          - { label: "Hero Background Image", name: "image", widget: "image" , required: FALSE}
+          - label: "Featured Images for TTMenus"
+            name: "images"
+            widget: "list"
+            required: TRUE
+            fields: 
+              - { label: "Featured Image", name: "image", widget: "image", required: TRUE }
+          - label: "Locations"
+            name: "locations"
+            widget: "list"
+            required: TRUE
+            fields: 
+            - { label: "Address", name: "address", widget: "string", required: TRUE }
+            - { label: "Latitude", name: "lat", type: "number", required: TRUE }
+            - { label: "Longitude", name: "lon", type: "number", required: TRUE }
+          - { label: "Facebook", name: "facebook", widget: "string" , required: FALSE}
+          - { label: "Instagram", name: "instagram", widget: "string", required: FALSE }
+          - { label: "Youtube", name: "youtube", widget: "string" , required: FALSE}
+          - { label: "Tiktok", name: "tiktok", widget: "string", required: FALSE }
+          - { label: "Phone", name: "phone", widget: "string" , required: FALSE}
+          - { label: "Whatsapp", name: "whatsapp", widget: "string", required: FALSE }
+          - label: "Opening Hours"
+            name: "opening_hours"
+            fields:
+            - { label: "Mode", name: "mode", widget: "select", options: ["Auto","Always Open","Always Closed"], required: TRUE }
+            - label: "Sunday"
+              name: "sun"
+              widget: "list"
+              fields: 
+              - { label: "Type", name: "type", widget: "select", options: ["Open","Close"], required: FALSE }
+              - { label: "Hour", name: "hour", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"], required: FALSE }
+              - { label: "Minute", name: "minute", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"], required: FALSE }
+            - label: "Monday"
+              name: "mon"
+              widget: "list"
+              fields: 
+              - { label: "Type", name: "type", widget: "select", options: ["Open","Close"], required: FALSE }
+              - { label: "Hour", name: "hour", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"], required: FALSE }
+              - { label: "Minute", name: "minute", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"], required: FALSE }
+            - label: "Tuesday"
+              name: "tue"
+              widget: "list"
+              fields: 
+              - { label: "Type", name: "type", widget: "select", options: ["Open","Close"], required: FALSE }
+              - { label: "Hour", name: "hour", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"], required: FALSE }
+              - { label: "Minute", name: "minute", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"], required: FALSE }
+            - label: "Wednesday"
+              name: "wed"
+              widget: "list"
+              fields: 
+              - { label: "Type", name: "type", widget: "select", options: ["Open","Close"], required: FALSE }
+              - { label: "Hour", name: "hour", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"], required: FALSE }
+              - { label: "Minute", name: "minute", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"], required: FALSE }
+            - label: "Thursday"
+              name: "thu"
+              widget: "list"
+              fields: 
+              - { label: "Type", name: "type", widget: "select", options: ["Open","Close"], required: FALSE }
+              - { label: "Hour", name: "hour", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"], required: FALSE }
+              - { label: "Minute", name: "minute", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"], required: FALSE }
+            - label: "Friday"
+              name: "fri"
+              widget: "list"
+              fields: 
+              - { label: "Type", name: "type", widget: "select", options: ["Open","Close"], required: FALSE }
+              - { label: "Hour", name: "hour", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"], required: FALSE }
+              - { label: "Minute", name: "minute", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"], required: FALSE }
+            - label: "Saturday"
+              name: "sat"
+              widget: "list"
+              fields: 
+              - { label: "Type", name: "type", widget: "select", options: ["Open","Close"], required: FALSE }
+              - { label: "Hour", name: "hour", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"], required: FALSE }
+              - { label: "Minute", name: "minute", widget: "select", options: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"], required: FALSE }
+          - { label: "Order System Whatsapp", name: "ordersystem-whatsapp", widget: "string", required: FALSE }
+      - name: "advertisments"
+        label: "Advertisments"
+        file: "content/Advertisments/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "select", options: ["Advertisments"], required: TRUE }
+          - { label: "Weight", name: "weight", required: TRUE}
+          - { label: "Featured Image", name: "image", widget: "image" , required: FALSE}
+          - { label: "Body", name: "body", widget: "markdown", required: FALSE  }
+      - name: "mainmenu"
+        label: "Main Menu"
+        file: "content/mainmenu/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "select", options: ["Main Menu"], required: TRUE }
+          - { label: "Weight", name: "weight", required: FALSE}
+          - { label: "Featured Image", name: "image", widget: "image" , required: FALSE}
+          - { label: "Body", name: "body", widget: "markdown", required: FALSE  }
+      - name: "bowls"
+        label: "Bowls"
+        file: "content/bowls/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "select", options: ["Bowls"], required: TRUE }
+          - { label: "Weight", name: "weight", required: FALSE}
+          - { label: "Featured Image", name: "image", widget: "image" , required: FALSE}
+          - { label: "Body", name: "body", widget: "markdown", required: FALSE  }
+      - name: "combos"
+        label: "Combos"
+        file: "content/combos/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "select", options: ["Combos"], required: TRUE }
+          - { label: "Weight", name: "weight", required: FALSE}
+          - { label: "Featured Image", name: "image", widget: "image" , required: FALSE}
+          - { label: "Body", name: "body", widget: "markdown", required: FALSE  }
+  - name: "advertisments" # Used in routes, e.g., /admin/collections/post
+    label: "Advertisments" # Used in the UI
+    folder: "content/advertisments" # The path to the folder where the documents are stored
+    path: "{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    media_folder: "/static/images" # Folder where user uploaded files should go
+    public_folder: "images"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string", required: TRUE }
+      - { label: "Weight", name: "weight", widget: "number", required: FALSE }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Event Date"
+        name: "eventdate"
+        widget: "list"
+        fields: 
+          - { label: "Start Date", name: "start", widget: "datetime" , required: TRUE }
+          - { label: "End Date", name: "end", widget: "datetime" , required: TRUE }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields: 
+          - { label: "Featured Image", name: "image", widget: "image", required: FALSE }
+      - { label: "Body", name: "body", widget: "markdown", required: FALSE  }
+  - name: "mainmenu" # Used in routes, e.g., /admin/collections/post
+    label: "Main Menu" # Used in the UI
+    folder: "content/mainmenu" # The path to the folder where the documents are stored
+    path: "{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    media_folder: "/static/images" # Folder where user uploaded files should go
+    public_folder: "images"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Weight", name: "weight", widget: "number", required: FALSE }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields: 
+          - { label: "Featured Image", name: "image", widget: "image", required: FALSE }
+      - { label: "Body", name: "body", widget: "markdown", required: FALSE }
+      - label: "Prices"
+        name: "prices" 
+        widget: "list" 
+        fields: 
+          - { label: "Size", name: "size", widget: "string", required: TRUE }
+          - { label: "Flavour", name: "flavour", widget: "string", required: TRUE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Additions"
+        name: "additions" 
+        widget: "list" 
+        fields: 
+          - { label: "Name", name: "name",  widget: "string", required: FALSE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Modifications"
+        name: "modifications" 
+        widget: "list" 
+        fields: 
+          - { label: "Name", name: "name",  widget: "string", required: FALSE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Sides"
+        name: "sides" 
+        widget: "list" 
+        fields: 
+          - { label: "Name", name: "name",  widget: "string", required: FALSE }
+          - { label: "Type", name: "type",  widget: "select", options: ["Regular", "Premium"], required: TRUE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Side Configuration"
+        name: "side_config" 
+        widget: "list" 
+        fields: 
+          - { label: "All Max", name: "all_max",  widget: "number", required: FALSE }
+          - { label: "All Value", name: "all_valuecount",  widget: "number", required: FALSE }
+          - { label: "All Value", name: "all_value", widget: "number", required: FALSE }
+          - { label: "Regular Max", name: "regular_max",  widget: "number", required: FALSE }
+          - { label: "Regular Value Count", name: "regular_valuecount",  widget: "number", required: FALSE }
+          - { label: "Regular Value", name: "regular_value", widget: "number", required: FALSE }
+          - { label: "Premium Max", name: "premium_max",  widget: "number", required: FALSE }
+          - { label: "Premium Value Count", name: "premium_valuecount",  widget: "number", required: FALSE }
+          - { label: "Premium Value", name: "premium_value", widget: "number", required: FALSE }
+  - name: "bowls" # Used in routes, e.g., /admin/collections/post
+    label: "Bowls" # Used in the UI
+    folder: "content/bowls" # The path to the folder where the documents are stored
+    path: "{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    media_folder: "/static/images" # Folder where user uploaded files should go
+    public_folder: "images"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Weight", name: "weight", widget: "number", required: FALSE }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields: 
+          - { label: "Featured Image", name: "image", widget: "image", required: FALSE }
+      - { label: "Body", name: "body", widget: "markdown", required: FALSE }
+      - label: "Prices"
+        name: "prices" 
+        widget: "list" 
+        fields: 
+          - { label: "Size", name: "size", widget: "string", required: TRUE }
+          - { label: "Flavour", name: "flavour", widget: "string", required: TRUE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Additions"
+        name: "additions" 
+        widget: "list" 
+        fields: 
+          - { label: "Name", name: "name",  widget: "string", required: FALSE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Modifications"
+        name: "modifications" 
+        widget: "list" 
+        fields: 
+          - { label: "Name", name: "name",  widget: "string", required: FALSE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Sides"
+        name: "sides" 
+        widget: "list" 
+        fields: 
+          - { label: "Name", name: "name",  widget: "string", required: FALSE }
+          - { label: "Type", name: "type",  widget: "select", options: ["Regular", "Premium"], required: TRUE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Side Configuration"
+        name: "side_config" 
+        widget: "list" 
+        fields: 
+          - { label: "All Max", name: "all_max",  widget: "number", required: FALSE }
+          - { label: "All Value", name: "all_valuecount",  widget: "number", required: FALSE }
+          - { label: "All Value", name: "all_value", widget: "number", required: FALSE }
+          - { label: "Regular Max", name: "regular_max",  widget: "number", required: FALSE }
+          - { label: "Regular Value Count", name: "regular_valuecount",  widget: "number", required: FALSE }
+          - { label: "Regular Value", name: "regular_value", widget: "number", required: FALSE }
+          - { label: "Premium Max", name: "premium_max",  widget: "number", required: FALSE }
+          - { label: "Premium Value Count", name: "premium_valuecount",  widget: "number", required: FALSE }
+          - { label: "Premium Value", name: "premium_value", widget: "number", required: FALSE }
+  - name: "combos" # Used in routes, e.g., /admin/collections/post
+    label: "Combos" # Used in the UI
+    folder: "content/combos" # The path to the folder where the documents are stored
+    path: "{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    media_folder: "/static/images" # Folder where user uploaded files should go
+    public_folder: "images"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Weight", name: "weight", widget: "number", required: FALSE }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields: 
+          - { label: "Featured Image", name: "image", widget: "image", required: FALSE }
+      - { label: "Body", name: "body", widget: "markdown", required: FALSE }
+      - label: "Prices"
+        name: "prices" 
+        widget: "list" 
+        fields: 
+          - { label: "Size", name: "size", widget: "string", required: TRUE }
+          - { label: "Flavour", name: "flavour", widget: "string", required: TRUE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Additions"
+        name: "additions" 
+        widget: "list" 
+        fields: 
+          - { label: "Name", name: "name",  widget: "string", required: FALSE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Modifications"
+        name: "modifications" 
+        widget: "list" 
+        fields: 
+          - { label: "Name", name: "name",  widget: "string", required: FALSE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Sides"
+        name: "sides" 
+        widget: "list" 
+        fields: 
+          - { label: "Name", name: "name",  widget: "string", required: FALSE }
+          - { label: "Type", name: "type",  widget: "select", options: ["Regular", "Premium"], required: TRUE }
+          - { label: "Price", name: "price", widget: "number", required: FALSE }
+      - label: "Side Configuration"
+        name: "side_config" 
+        widget: "list" 
+        fields: 
+          - { label: "All Max", name: "all_max",  widget: "number", required: FALSE }
+          - { label: "All Value", name: "all_valuecount",  widget: "number", required: FALSE }
+          - { label: "All Value", name: "all_value", widget: "number", required: FALSE }
+          - { label: "Regular Max", name: "regular_max",  widget: "number", required: FALSE }
+          - { label: "Regular Value Count", name: "regular_valuecount",  widget: "number", required: FALSE }
+          - { label: "Regular Value", name: "regular_value", widget: "number", required: FALSE }
+          - { label: "Premium Max", name: "premium_max",  widget: "number", required: FALSE }
+          - { label: "Premium Value Count", name: "premium_valuecount",  widget: "number", required: FALSE }
+          - { label: "Premium Value", name: "premium_value", widget: "number", required: FALSE }
+  

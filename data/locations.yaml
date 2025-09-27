@@ -1,0 +1,127 @@
+locations:
+  - address: 33 Ariapita Ave, Port of Spain
+    lat: 10.659223458630825
+    lon: -61.51971280000002
+    phone: 18681234567
+    whatsappordering: 
+      - phone: 18681234567
+        table: 
+          - id: 1
+          - id: 2
+          - id: 3
+          - id: 4
+          - id: 5
+          - id: 6
+          - id: 7
+          - id: 8
+      - phone: 186870603
+        table: 
+          - id: 9
+          - id: 10
+          - id: 11
+          - id: 12
+          - id: 13
+          - id: 14
+          - id: 15
+          - id: 16
+      - phone: 18687060349
+        table: 
+          - id: p1
+          - id: p2
+          - id: p3
+          - id: p4
+          - id: p5
+    links:
+      - fooddrop: url
+    tags:
+      - dine-in
+      - pickup
+      - delivery
+    opening_hours:
+      mode: Auto
+      sun:
+        - { type: Close, hour: "3", minute: "0" }
+        - { type: Open, hour: "16", minute: "0" }
+      mon:
+        - { type: Close, hour: "1", minute: "0" }
+        - { type: Open, hour: "11", minute: "0" }
+      tue:
+        - { type: Close, hour: "2", minute: "0" }
+        - { type: Open, hour: "11", minute: "0" }
+      wed:
+        - { type: Close, hour: "2", minute: "0" }
+        - { type: Open, hour: "11", minute: "0" }
+      thu:
+        - { type: Close, hour: "2", minute: "0" }
+        - { type: Open, hour: "11", minute: "0" }
+      fri:
+        - { type: Close, hour: "2", minute: "0" }
+        - { type: Open, hour: "11", minute: "0" }
+      sat:
+        - { type: Close, hour: "3", minute: "0" }
+        - { type: Open, hour: "11", minute: "0" }
+
+  - address: Mucurapo Road, Port of Spain
+    lat: 10.666277876233893
+    lon: -61.5305835949968
+    phone: +1-868-123-4567
+    whatsappordering: 
+      - phone: 18681234567
+        table: 
+          - id: pickup
+    links: []
+    tags:
+      - pickup
+    opening_hours:
+      mode: Auto
+      sun: []
+      mon:
+        - { type: Open, hour: "11", minute: "30" }
+        - { type: Close, hour: "17", minute: "30" }
+      tue:
+        - { type: Open, hour: "11", minute: "30" }
+        - { type: Close, hour: "17", minute: "30" }
+      wed:
+        - { type: Open, hour: "11", minute: "30" }
+        - { type: Close, hour: "17", minute: "30" }
+      thu:
+        - { type: Open, hour: "11", minute: "30" }
+        - { type: Close, hour: "17", minute: "30" }
+      fri:
+        - { type: Open, hour: "11", minute: "30" }
+        - { type: Close, hour: "17", minute: "30" }
+      sat: []
+
+  - address: Diamond Vale, Diego Martin
+    lat: 10.717893773243384
+    lon: -61.55576743294112
+    phone: +1-868-123-4567
+    whatsappordering: 
+      - phone: 18681234567
+        table: 
+          - id: pickup
+    links: []
+    tags:
+      - pickup
+      - delivery
+    opening_hours:
+      mode: Auto
+      sun: []
+      mon:
+        - { type: Open, hour: "16", minute: "0" }
+        - { type: Close, hour: "22", minute: "0" }
+      tue:
+        - { type: Open, hour: "16", minute: "0" }
+        - { type: Close, hour: "22", minute: "0" }
+      wed:
+        - { type: Open, hour: "16", minute: "0" }
+        - { type: Close, hour: "22", minute: "0" }
+      thu:
+        - { type: Open, hour: "16", minute: "0" }
+        - { type: Close, hour: "22", minute: "0" }
+      fri:
+        - { type: Open, hour: "16", minute: "0" }
+        - { type: Close, hour: "23", minute: "0" }
+      sat:
+        - { type: Open, hour: "16", minute: "0" }
+        - { type: Close, hour: "23", minute: "0" }

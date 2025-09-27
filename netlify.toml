@@ -1,0 +1,14 @@
+[build]
+  publish = "public"
+  command = "bash ./build.sh"
+
+[context.production.environment]
+  GIT_SUBMODULE_STRATEGY = "recursive"
+
+[build.environment]
+  HUGO_VERSION = "0.140.2"
+
+[[redirects]]
+  from = "/*"
+  to = "/404/"
+  status = 404

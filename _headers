@@ -1,0 +1,7 @@
+# _headers file
+
+# Allow all origins to access the index.json file
+/index.json
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET
+  Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept

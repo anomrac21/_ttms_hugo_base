@@ -1,0 +1,146 @@
+Folder PATH listing
+Volume serial number is 7651-A37E
+C:.
+|   .gitignore
+|   .gitmodules
+|   .hugo_build.lock
+|   build.sh
+|   filetree.doc
+|   hugo.toml
+|   netlify.toml
+|   README.md
+|   _headers
+|   
++---archetypes
+|       default.md
+|       
++---assets
++---content
+|   |   _index.md
+|   |   
+|   \---Advertisments
+|           _index.md
+|           
++---data
+|       locations.yaml
+|       menudata.json
+|       menudata.yaml
+|       
++---i18n
++---layouts
++---static
+|   |   favicon.ico
+|   |   manifest.json
+|   |   
+|   +---admin
+|   |       config.yml
+|   |       index.html
+|   |       
+|   +---branding
+|   |       favicon-400x200.webp
+|   |       favicon.ico
+|   |       favicon.png
+|   |       favicon144.webp
+|   |       favicon152.webp
+|   |       favicon16.webp
+|   |       favicon192.webp
+|   |       favicon196.webp
+|   |       favicon512.webp
+|   |       mappin.webp
+|   |       richscreenshot1.webp
+|   |       richscreenshot2.webp
+|   |       ttmenus.gif
+|   |       
+|   +---css
+|   |       colors.css
+|   |       custom.css
+|   |       
+|   +---images
+|   +---js
+|   |       custom.js
+|   |       test.js
+|   |       
+|   \---main
+|           bg.webp
+|           
+\---themes
+    \---_menus_ttms
+        |   hugo.toml
+        |   LICENSE
+        |   README.md
+        |   theme.toml
+        |   
+        +---archetypes
+        |       default.md
+        |       
+        +---assets
+        |   +---css
+        |   |       main.css
+        |   |       
+        |   \---js
+        |           main.js
+        |           ordersystem.js
+        |           
+        +---content
+        |       404.md
+        |       _index.md
+        |       
+        +---layouts
+        |   |   index.json.json
+        |   |   
+        |   +---partials
+        |   |   |   accessibility.html
+        |   |   |   adbanner.html
+        |   |   |   apple_instructions.html
+        |   |   |   askofserver.html
+        |   |   |   audio_effects.html
+        |   |   |   body.html
+        |   |   |   cart.html
+        |   |   |   contact_info.html
+        |   |   |   dinemode.html
+        |   |   |   footer.html
+        |   |   |   head.html
+        |   |   |   header.html
+        |   |   |   hero.html
+        |   |   |   loader.html
+        |   |   |   menu.html
+        |   |   |   order_modal.html
+        |   |   |   search.html
+        |   |   |   table_select_modal.html
+        |   |   |   terms.html
+        |   |   |   ttmenus_modal.html
+        |   |   |   
+        |   |   +---head
+        |   |   |       css.html
+        |   |   |       js.html
+        |   |   |       
+        |   |   \---ttms-dashboard
+        |   |           button.html
+        |   |           dashboard.html
+        |   |           
+        |   \---_default
+        |           baseof.html
+        |           home.html
+        |           list.html
+        |           list.json.json
+        |           single.html
+        |           
+        \---static
+            |   OneSignalSDKWorker.js
+            |   
+            +---branding
+            |   |   askforserver.webp
+            |   |   ttmenus.gif
+            |   |   
+            |   \---other
+            |           fd.webp
+            |           
+            +---src
+            |       app.js
+            |       
+            \---__MACOSX
+                |   ._OneSignalSDK-v16-ServiceWorker
+                |   
+                \---OneSignalSDK-v16-ServiceWorker
+                        ._OneSignalSDKWorker.js
+                        

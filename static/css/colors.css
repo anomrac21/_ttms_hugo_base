@@ -1,0 +1,45 @@
+:root {
+    /*HEADER*/
+    --header-color: #222731ee;
+    --header-bordercolor-1: #fefefe;
+    --header-bordercolor-2: #fefefe;
+    --header-bg-color: #222731ee;
+    --header-icon-color: #fefefe;
+    --header-bg-image: none;
+
+    /*HERO*/
+    --hero-bg-color: #000000;
+    --hero-bg-image-fg-color: #f4dec3;
+    --hero-text-color: #000;
+    --contact-info-bg: none;
+
+    /*MAIN*/
+    --main-bg-color: #f4dec3;
+    --main-text-color: #ffffff;
+    --main-bg: #000;
+
+    /*MENU*/
+    --menu-bg-color-1: #22273111;
+    --menu-bg-color-2: #00000055;
+
+    /*MENU  BUTTON*/
+    --button-color1: #222731;
+    --button-color2: #000;
+    --button-text-color1: #fefefe;
+    --button-text-color2: #ffffff;
+    --button-text-color3: #fff;
+
+    /*MENU  SELECTED BUTTON*/
+    --selected-button-color1: #200;
+    --selected-button-color2: #200;
+    --selected-button-color3: #fff;
+    --selected-button-color4: #000000ee;
+    --selected-text-color1: #fff;
+    --selected-text-color2: #fff;
+    --selected-text-color3: #85181c;
+
+    /*FOOTER*/
+    --footer-bg-color: #fefefe;
+    --footer-text-color: #000;
+    --modal-bg-container-color: #00000055;
+}
