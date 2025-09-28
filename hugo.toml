@@ -1,17 +1,58 @@
 baseURL = 'https://omgsushi.ttmenus.com/'
-languageCode = 'en-us'
+languageCode = 'en-tt'
 title = 'Omg Sushi'
 theme = '_menus_ttms'
 
-[params]
-  name = "OMG Sushi"
+[params.services]
+  onesignalid = "your-onesignal-id-here"
+  analyticsid = 1
+  notifications = true
 
+[params.orderingsystem]
+  vat = 0
+  servicecharge = 0
+  hastables = true
+  whatsapp = 18681234567
+
+[params.orderingmenu]
+  sidesname = "Sides"
+
+[params.posintegration]
+  enabled = true
+  api_url = "{{ env `POS_API_URL` }}"
+  # POS configuration is now per-location in data/locations.yaml
+  
+# Social profiles
+[params.social]
+  facebook = ""
+  instagram = ""
+  tiktok = ""
+  youtube = ""
+  email = ""
+  phone = 18681234567
+  
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.parser]
+      attribute = true
 
 [outputs]
   home = ["HTML", "JSON"]
   section = ["HTML", "JSON"]
-  page = ["HTML"]
+  page = ["HTML", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  subcategory = "subcategories"
+  type = "types"
+  event = "events"
+  ingredient ="ingredients"
+  cookingmethod ="cookingmethods"
+
+[privacy]
+  [privacy.instagram]
+    disable = false
+    simple = false

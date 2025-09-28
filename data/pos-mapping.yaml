@@ -1,0 +1,154 @@
+# POS Mapping Configuration for OMG Sushi
+# This file maps Hugo menu items to POS system items
+
+# Global mappings apply to all locations unless overridden
+global:
+  loyverse:
+    # Example mappings - customize based on your actual menu
+    # Format: "hugo-item-slug": "loyverse-item-id"
+    items:
+      # "sushi-roll-california": "california-roll-001"
+      # "sushi-roll-spicy-tuna": "spicy-tuna-roll-002"
+      # "sashimi-salmon": "salmon-sashimi-003"
+      # "nigiri-tuna": "tuna-nigiri-004"
+      # "miso-soup": "miso-soup-005"
+      # "edamame": "edamame-006"
+    
+    # Category mappings
+    categories:
+      # "sushi-rolls": "sushi-rolls-cat"
+      # "sashimi": "sashimi-cat"
+      # "nigiri": "nigiri-cat"
+      # "appetizers": "appetizers-cat"
+      # "beverages": "beverages-cat"
+  
+  odoo:
+    # Example mappings for Odoo
+    # Format: "hugo-item-slug": pos_product_id
+    items:
+      # "sushi-roll-california": 123
+      # "sushi-roll-spicy-tuna": 124
+      # "sashimi-salmon": 125
+      # "nigiri-tuna": 126
+      # "miso-soup": 127
+      # "edamame": 128
+    
+    # Category mappings
+    categories:
+      # "sushi-rolls": 10
+      # "sashimi": 11
+      # "nigiri": 12
+      # "appetizers": 13
+      # "beverages": 14
+
+# Location-specific mappings override global mappings
+locations:
+  ARIAPITA:
+    loyverse:
+      items:
+        # Location-specific item mappings
+        # "special-roll-aripita": "special-roll-ari-001"
+      categories:
+        # Location-specific category mappings
+    
+    odoo:
+      items:
+        # "special-roll-aripita": 200
+      categories:
+        # Location-specific category mappings
+  
+  MUCURAPO:
+    loyverse:
+      items:
+        # Food truck might have limited menu
+        # "food-truck-special": "food-truck-special-001"
+      categories:
+        # Food truck categories
+  
+  DIAMOND_VALE:
+    loyverse:
+      items:
+        # Another food truck location
+        # "diamond-vale-special": "diamond-vale-special-001"
+      categories:
+        # Food truck categories
+
+# Menu synchronization settings
+sync_settings:
+  # How often to sync menu items (in minutes)
+  sync_interval: 60
+  
+  # Whether to sync automatically on startup
+  auto_sync_on_startup: true
+  
+  # Whether to sync when Hugo site is built
+  sync_on_build: true
+  
+  # Maximum number of retries for failed syncs
+  max_retries: 3
+  
+  # Timeout for POS API calls (in seconds)
+  api_timeout: 30
+
+# Validation settings
+validation:
+  # Whether to validate menu items before syncing
+  validate_before_sync: true
+  
+  # Required fields for menu items
+  required_fields:
+    - name
+    - price
+    - description
+  
+  # Optional fields that should be included if available
+  optional_fields:
+    - image
+    - allergens
+    - nutritional_info
+    - preparation_time
+
+# Error handling
+error_handling:
+  # Whether to continue syncing if individual items fail
+  continue_on_item_error: true
+  
+  # Whether to log all sync operations
+  log_all_operations: true
+  
+  # Whether to send notifications on sync failures
+  notify_on_failure: true
+  
+  # Notification channels (email, slack, etc.)
+  notification_channels:
+    - email
+    - slack
+
+# Custom field mappings
+# Map Hugo front matter fields to POS system fields
+field_mappings:
+  loyverse:
+    # "hugo_field": "loyverse_field"
+    # "allergens": "allergen_info"
+    # "preparation_time": "prep_time_minutes"
+    # "spice_level": "heat_level"
+  
+  odoo:
+    # "hugo_field": "odoo_field"
+    # "allergens": "allergen_info"
+    # "preparation_time": "prep_time_minutes"
+    # "spice_level": "heat_level"
+
+# Price formatting
+price_formatting:
+  # Currency code
+  currency: "TTD"
+  
+  # Decimal places
+  decimal_places: 2
+  
+  # Whether to include currency symbol
+  include_currency_symbol: true
+  
+  # Currency symbol
+  currency_symbol: "$"

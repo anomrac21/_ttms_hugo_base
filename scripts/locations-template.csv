@@ -1,0 +1,7 @@
+location_id,location_name,address,city,lat,lon,phone,whatsapp,subcategories,notes
+ARIAPITA,Ariapita Avenue,33 Ariapita Ave Port of Spain,Port of Spain,10.659223458630825,-61.51971280000002,18681234567,18681234567,"Restaurant,Bar",Main location with full restaurant and bar
+MUCURAPO,Mucurapo Road,Mucurapo Road Port of Spain,Port of Spain,10.666277876233893,-61.5305835949968,18681234567,18681234567,Food Truck,Food truck location
+DIAMOND_VALE,Diamond Vale,Diamond Vale Diego Martin,Diego Martin,10.717893773243384,-61.55576743294112,18681234567,18681234567,Food Truck,Food truck in Diego Martin
+SAN_FERNANDO,San Fernando,High Street San Fernando,San Fernando,10.2833,-61.4667,18681234567,18681234567,Restaurant,New location in San Fernando
+CHAGUANAS_CENTRAL,Chaguanas Central,Chaguanas Main Road,Chaguanas,10.5167,-61.4167,18681234567,18681234567,Restaurant,Central Chaguanas location
+COUVA,Couva,Couva Main Road,Couva,10.4167,-61.4667,18681234567,18681234567,Food Truck,Couva food truck

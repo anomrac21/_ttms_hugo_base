@@ -1,127 +1,201 @@
 locations:
   - address: 33 Ariapita Ave, Port of Spain
-    lat: 10.659223458630825
-    lon: -61.51971280000002
+    city: Port of Spain
+    island: Trinidad
+    subcategories: 
+      - Restaurant
+      - Bar
+    latlon: [10.659223458630825,-61.51971280000002]
     phone: 18681234567
-    whatsappordering: 
-      - phone: 18681234567
-        table: 
-          - id: 1
-          - id: 2
-          - id: 3
-          - id: 4
-          - id: 5
-          - id: 6
-          - id: 7
-          - id: 8
-      - phone: 186870603
-        table: 
-          - id: 9
-          - id: 10
-          - id: 11
-          - id: 12
-          - id: 13
-          - id: 14
-          - id: 15
-          - id: 16
-      - phone: 18687060349
-        table: 
-          - id: p1
-          - id: p2
-          - id: p3
-          - id: p4
-          - id: p5
-    links:
-      - fooddrop: url
-    tags:
-      - dine-in
-      - pickup
-      - delivery
+    whatsapp: 18681234567
+    orderingtables: ["Table 1", "Table 2", "Table 3", "Table 4", "Table 5", "Table 6", "Table 7", "Table 8", "Table 9", "Table 10", "Table 11", "Table 12", "Table 13", "Table 14", "Table 15", "Table 16", "Patio 1", "Patio 2", "Patio 3", "Patio 4", "Patio 5"]
+    delivery:
+      fooddrop: https://fooddropcaribbean.com/en/store/OMGSushi/your-store-id
+    pos:
+      loyverse:
+        enabled: true
+        provider: "loyverse"
+        store_id: "{{ env `LOYVERSE_STORE_ID_ARIAPITA` }}"
+        access_token: "{{ env `LOYVERSE_ACCESS_TOKEN_ARIAPITA` }}"
+        webhook_secret: "{{ env `LOYVERSE_WEBHOOK_SECRET` }}"
+        api_url: "{{ env `POS_API_URL` }}"
+        sync_menu: true
+        auto_process_orders: true
+        fallback_to_whatsapp: true
+      odoo:
+        enabled: true
+        provider: "odoo"
+        company_id: "{{ env `ODOO_COMPANY_ID_ARIAPITA` }}"
+        partner_id: "{{ env `ODOO_PARTNER_ID_ARIAPITA` }}"
+        pos_config_id: "{{ env `ODOO_POS_CONFIG_ID_ARIAPITA` }}"
+        user_id: "{{ env `ODOO_USER_ID_ARIAPITA` }}"
+        api_url: "{{ env `ODOO_API_URL_ARIAPITA` }}"
+        database: "{{ env `ODOO_DATABASE_ARIAPITA` }}"
+        sync_menu: true
+        auto_process_orders: true
+        fallback_to_whatsapp: true
     opening_hours:
       mode: Auto
       sun:
-        - { type: Close, hour: "3", minute: "0" }
-        - { type: Open, hour: "16", minute: "0" }
+        - type: Close
+          time: "3:00"
+        - type: Open
+          time: "16:00"
       mon:
-        - { type: Close, hour: "1", minute: "0" }
-        - { type: Open, hour: "11", minute: "0" }
+        - type: Close
+          time: "1:00"
+        - type: Open
+          time: "11:00"
       tue:
-        - { type: Close, hour: "2", minute: "0" }
-        - { type: Open, hour: "11", minute: "0" }
+        - type: Close
+          time: "2:00"
+        - type: Open
+          time: "11:00"
       wed:
-        - { type: Close, hour: "2", minute: "0" }
-        - { type: Open, hour: "11", minute: "0" }
+        - type: Close
+          time: "2:00"
+        - type: Open
+          time: "11:00"
       thu:
-        - { type: Close, hour: "2", minute: "0" }
-        - { type: Open, hour: "11", minute: "0" }
+        - type: Close
+          time: "2:00"
+        - type: Open
+          time: "11:00"
       fri:
-        - { type: Close, hour: "2", minute: "0" }
-        - { type: Open, hour: "11", minute: "0" }
+        - type: Close
+          time: "2:00"
+        - type: Open
+          time: "11:00"
       sat:
-        - { type: Close, hour: "3", minute: "0" }
-        - { type: Open, hour: "11", minute: "0" }
+        - type: Close
+          time: "3:00"
+        - type: Open
+          time: "11:00"
 
   - address: Mucurapo Road, Port of Spain
-    lat: 10.666277876233893
-    lon: -61.5305835949968
-    phone: +1-868-123-4567
-    whatsappordering: 
-      - phone: 18681234567
-        table: 
-          - id: pickup
-    links: []
-    tags:
-      - pickup
+    city: Port of Spain
+    island: Trinidad
+    subcategories: 
+      - Food Truck
+    latlon: [10.666277876233893,-61.5305835949968]
+    phone: 18681234567
+    whatsapp: 18681234567
+    orderingtables: ["Takeaway Only"]
+    pos:
+      loyverse:
+        enabled: true
+        provider: "loyverse"
+        store_id: "{{ env `LOYVERSE_STORE_ID_MUCURAPO` }}"
+        access_token: "{{ env `LOYVERSE_ACCESS_TOKEN_MUCURAPO` }}"
+        webhook_secret: "{{ env `LOYVERSE_WEBHOOK_SECRET` }}"
+        api_url: "{{ env `POS_API_URL` }}"
+        sync_menu: true
+        auto_process_orders: true
+        fallback_to_whatsapp: true
+      odoo:
+        enabled: true
+        provider: "odoo"
+        company_id: "{{ env `ODOO_COMPANY_ID_MUCURAPO` }}"
+        partner_id: "{{ env `ODOO_PARTNER_ID_MUCURAPO` }}"
+        pos_config_id: "{{ env `ODOO_POS_CONFIG_ID_MUCURAPO` }}"
+        user_id: "{{ env `ODOO_USER_ID_MUCURAPO` }}"
+        api_url: "{{ env `ODOO_API_URL_MUCURAPO` }}"
+        database: "{{ env `ODOO_DATABASE_MUCURAPO` }}"
+        sync_menu: true
+        auto_process_orders: true
+        fallback_to_whatsapp: true
     opening_hours:
       mode: Auto
       sun: []
       mon:
-        - { type: Open, hour: "11", minute: "30" }
-        - { type: Close, hour: "17", minute: "30" }
+        - type: Open
+          time: "11:30"
+        - type: Close
+          time: "17:30"
       tue:
-        - { type: Open, hour: "11", minute: "30" }
-        - { type: Close, hour: "17", minute: "30" }
+        - type: Open
+          time: "11:30"
+        - type: Close
+          time: "17:30"
       wed:
-        - { type: Open, hour: "11", minute: "30" }
-        - { type: Close, hour: "17", minute: "30" }
+        - type: Open
+          time: "11:30"
+        - type: Close
+          time: "17:30"
       thu:
-        - { type: Open, hour: "11", minute: "30" }
-        - { type: Close, hour: "17", minute: "30" }
+        - type: Open
+          time: "11:30"
+        - type: Close
+          time: "17:30"
       fri:
-        - { type: Open, hour: "11", minute: "30" }
-        - { type: Close, hour: "17", minute: "30" }
+        - type: Open
+          time: "11:30"
+        - type: Close
+          time: "17:30"
       sat: []
 
   - address: Diamond Vale, Diego Martin
-    lat: 10.717893773243384
-    lon: -61.55576743294112
-    phone: +1-868-123-4567
-    whatsappordering: 
-      - phone: 18681234567
-        table: 
-          - id: pickup
-    links: []
-    tags:
-      - pickup
-      - delivery
+    city: Diego Martin
+    island: Trinidad
+    subcategories: 
+      - Food Truck
+    latlon: [10.717893773243384,-61.55576743294112]
+    phone: 18681234567
+    whatsapp: 18681234567
+    orderingtables: ["Takeaway Only"]
+    pos:
+      loyverse:
+        enabled: true
+        provider: "loyverse"
+        store_id: "{{ env `LOYVERSE_STORE_ID_DIAMOND_VALE` }}"
+        access_token: "{{ env `LOYVERSE_ACCESS_TOKEN_DIAMOND_VALE` }}"
+        webhook_secret: "{{ env `LOYVERSE_WEBHOOK_SECRET` }}"
+        api_url: "{{ env `POS_API_URL` }}"
+        sync_menu: true
+        auto_process_orders: true
+        fallback_to_whatsapp: true
+      odoo:
+        enabled: true
+        provider: "odoo"
+        company_id: "{{ env `ODOO_COMPANY_ID_DIAMOND_VALE` }}"
+        partner_id: "{{ env `ODOO_PARTNER_ID_DIAMOND_VALE` }}"
+        pos_config_id: "{{ env `ODOO_POS_CONFIG_ID_DIAMOND_VALE` }}"
+        user_id: "{{ env `ODOO_USER_ID_DIAMOND_VALE` }}"
+        api_url: "{{ env `ODOO_API_URL_DIAMOND_VALE` }}"
+        database: "{{ env `ODOO_DATABASE_DIAMOND_VALE` }}"
+        sync_menu: true
+        auto_process_orders: true
+        fallback_to_whatsapp: true
     opening_hours:
       mode: Auto
       sun: []
       mon:
-        - { type: Open, hour: "16", minute: "0" }
-        - { type: Close, hour: "22", minute: "0" }
+        - type: Open
+          time: "16:00"
+        - type: Close
+          time: "22:00"
       tue:
-        - { type: Open, hour: "16", minute: "0" }
-        - { type: Close, hour: "22", minute: "0" }
+        - type: Open
+          time: "16:00"
+        - type: Close
+          time: "22:00"
       wed:
-        - { type: Open, hour: "16", minute: "0" }
-        - { type: Close, hour: "22", minute: "0" }
+        - type: Open
+          time: "16:00"
+        - type: Close
+          time: "22:00"
       thu:
-        - { type: Open, hour: "16", minute: "0" }
-        - { type: Close, hour: "22", minute: "0" }
+        - type: Open
+          time: "16:00"
+        - type: Close
+          time: "22:00"
       fri:
-        - { type: Open, hour: "16", minute: "0" }
-        - { type: Close, hour: "23", minute: "0" }
+        - type: Open
+          time: "16:00"
+        - type: Close
+          time: "23:00"
       sat:
-        - { type: Open, hour: "16", minute: "0" }
-        - { type: Close, hour: "23", minute: "0" }
+        - type: Open
+          time: "16:00"
+        - type: Close
+          time: "23:00"
